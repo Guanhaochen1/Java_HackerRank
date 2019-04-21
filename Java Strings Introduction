@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);                                    //接收input
+        String A=sc.next();
+        String B=sc.next();
+        
+        int a = A.length();                                                   //x.length() method,查找字符串长度         
+        int b = B.length();
+        System.out.println(a+b);
+        
+        if(A.compareTo(B)<=0){                                               //x.compareTo(y) method,比较x与y字母顺序
+            System.out.println("No");                                        //如果x与y是完全一致的字符串，返回0的值
+        }else{                                                               //如果x字母顺序在y之前，则返回小于0的值
+            System.out.println("Yes");                                       //如果x字母顺序在y之后，则返回大于0的值
+        }
+        String tempA = A.substring(0,1).toUpperCase() + A.substring(1);      //substring(0,1)截取字符串位置 0开始，1之前的字符
+        String tempB = B.substring(0,1).toUpperCase() + B.substring(1);      //toUpperCase() 转换为大写字母
+        System.out.println(tempA + " " + tempB);                             //substring(1)截取自粗喘1开始的所有字符
+    }
+}
